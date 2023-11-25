@@ -37,9 +37,9 @@ export default function Register(){
 
     return(
         <div className="">
-            <img className="w-screen h-screen" src={bgi}></img>
+            <img className="w-screen h-screen" src="https://img.freepik.com/premium-photo/soccer-stadium-midnight-with-ai-generated_144089-841.jpg"></img>
             <div className="header h-screen w-screen absolute top-0" >
-            <Link to ="/"><button className="font-semibold text-[30px] m-12 w-[200px] mt-8 text-white cursor:pointer">Namma Gym</button></Link>
+            <Link to ="/"><button className="font-semibold text-[30px] m-12 w-[200px] mt-8 text-white cursor:pointer">Namma GYM</button></Link>
                 <div className="flex  gap-8  justify-end mr-12 mt-[-80px] text-white ">
                     <div >Membership</div>
                     <div>Book Class</div>

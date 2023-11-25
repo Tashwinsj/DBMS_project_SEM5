@@ -18,11 +18,15 @@ export default function Login(){
     }
 
 
-    const logger = async (e) =>{
+    const logger = async (e) =>{ 
+        if (log.password != "tash") {
+            setmsg("incorrect password !!!")
+            return 
+        }
         e.preventDefault() ;
         try{
            const respo = await axios.post("http://localhost:5004/loguser" , log) ;
-           if (respo.data.success) { navigate("/dashboard")}
+           if (respo.data.success && log.password == "tash") { navigate("/dashboard/" + respo.data.mid)   }
            else {setmsg("User not found in the database !")}
 
         }
@@ -37,9 +41,9 @@ export default function Login(){
 
     return(
         <div className="">
-            <img className="w-screen h-screen" src={bgi}></img>
+            <img className="w-screen h-screen" src="https://img.freepik.com/premium-photo/soccer-stadium-midnight-with-ai-generated_144089-841.jpg"></img>
             <div className="header h-screen w-screen absolute top-0" >
-            <Link to ="/"><button className="font-semibold text-[30px] m-12 w-[200px] mt-8 text-white cursor:pointer">Namma Gym</button></Link>
+            <Link to ="/"><button className="font-semibold text-[30px] m-12 w-[200px] mt-8 text-white cursor:pointer">Namma GYm</button></Link>
                 <div className="flex  gap-8  justify-end mr-12 mt-[-80px] text-white ">
                     <div >Membership</div>
                     <div>Book Class</div>

@@ -3,10 +3,16 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import First from './comp/First'
-import Login from './comp/auth/login'
+import Login from './comp/auth/Login'
 import Register from './comp/auth/Register'
 import { Routes, Route } from "react-router-dom";
 import Dashboard from './comp/Dashboard'
+import Memship from './comp/Memship'
+import Equipment from './comp/Equipment'
+import Bookclass from './comp/Bookclass'
+import Analytics from './comp/Analytics'
+import Booking from './comp/Booking' 
+
 
 
 
@@ -31,7 +37,12 @@ function App() {
         <Route path='/' element={<First/>}/> 
         <Route path='/login' element={<Login/>}/> 
         <Route path='/register' element={<Register/>}/> 
-        <Route path='/dashboard' element={<Dashboard/>}/> 
+        <Route path='/dashboard/:id' element={<Dashboard/>}/> 
+        <Route path='/membership/:id' element={<Memship  />}/> 
+        <Route path='/equipments/:id' element={<Equipment  />}/> 
+        <Route path='/bookclass' element={<Bookclass  />}/> 
+        <Route path='/analytics' element={<Analytics  />}/> 
+        <Route path='/book/:id' element={<Booking  />}/> 
 
       </Routes>
 
