@@ -51,7 +51,7 @@ app.get("/diet" ,(req, res)=>{
 })
 
 app.post("/equipments" ,(req ,res)=>{
-    const q = `SELECT * FROM equipments  where organ = ? AND location LIKE ?  AND item = ?;`
+    const q = `SELECT * FROM equipments  where organ  = ? AND location LIKE ?  AND item = ?;`
     vals  =  req.body.organ   
     locs = req.body.location 
     item = req.body.item
